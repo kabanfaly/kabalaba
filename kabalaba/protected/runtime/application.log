@@ -1,0 +1,23 @@
+2012/08/17 15:54:06 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/kabalaba/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:116
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(101): CAssetManager->setBasePath('/var/www/kabala...')
+#1 /var/www/yii/framework/web/CAssetManager.php(219): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(449): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(486): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(302): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(195): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/kabalaba/protected/controllers/SiteController.php(66): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(276): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/kabalaba/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/kabalaba/index.php?r=site/contact
+HTTP_REFERER=http://localhost/kabalaba/index.php?r=site/page&view=about
+---
